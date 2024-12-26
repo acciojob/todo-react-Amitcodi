@@ -1,5 +1,5 @@
 
-import React,{useState} from "react";
+import React,{useState}from "react";
 import './../styles/App.css';
 
 const App = () => {
@@ -25,10 +25,12 @@ const App = () => {
       <button onClick={submitHandler}>Add Todo</button>
       {
         todolist.map((item, index) => (
-          <div key={index}>
+          <ul>
+          <li key={index}>
             {item}
             <button onClick={() => setTodoList(todolist.filter((_, i) => i!== index))}>Delete</button>
-          </div>
+          </li>
+          </ul>
         ))
       }
     </div>
