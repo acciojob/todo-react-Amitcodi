@@ -23,9 +23,7 @@ const App = () => {
         todolist.map((item, index) => (
           <div key={index}>
             {item}
-            <button onClick={() => setTodoList(todolist.filter((_, i) => i!== index))}>
-              Delete
-            </button>
+            <button onClick={() => setTodoList(todolist.filter((_, i) => i!== index))}>Delete</button>
           </div>
         ))
       }
