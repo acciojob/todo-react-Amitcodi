@@ -1,5 +1,5 @@
 
-import React from "react";
+import React,{useState} from "react";
 import './../styles/App.css';
 
 const App = () => {
@@ -7,8 +7,12 @@ const App = () => {
     let [todolist, setTodoList] = useState([]);
   
     function submitHandler() {
+      if(todo){
       setTodoList([...todolist,todo]);
       setTodo("");
+      }else{
+        alert("Please enter a todo!");
+      }
     }
   return (
     <div>
